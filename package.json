@@ -1,0 +1,25 @@
+{
+  "name": "music-free-plugin",
+  "version": "1.0.0",
+  "description": "MusicFree插件",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "MusicFree插件",
+    "MusicFreePlugin"
+  ],
+  "author": "落雨不悔",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "axios": "^1.7.7",
+    "crypto-js": "^4.2.0",
+    "typescript": "^5.6.3"
+  },
+  "ts-node": {
+    "esm": true
+  }
+}
