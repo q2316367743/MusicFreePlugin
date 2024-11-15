@@ -76,7 +76,7 @@ async function getMusicInfo(
     title: data.title,
     artist: data.singer,
     artwork: data.cover,
-    music_url: data.url
+    url: data.url
   };
 }
 
@@ -86,7 +86,7 @@ export default {
   // 插件作者
   author: "落雨不悔",
   // 插件版本号
-  version: "1.0.0",
+  version: "1.0.1",
   // 插件更新地址
   srcUrl: `https://static.esion.xyz/public/源/MusicFree/${fileName}.js`,
   // 主键
@@ -127,7 +127,7 @@ export default {
   // async getMediaSource(
   //   mediaItem: IMusicItem,
   //   quality: MusicQuality
-  // ): Promise<GetMediaSourceResult> {
+  // ): Promise<IMediaSourceResult> {
   //   const data = await getMusicInfo(mediaItem);
   //   return {
   //     url: data.music_url,
@@ -147,12 +147,12 @@ export default {
    * 获取歌词
    * @param  musicItem  音乐项
    */
-  async getLyric(musicItem: IMusicItem): Promise<ILyricSource | null> {
-    const data = await getMusicInfo(musicItem);
-    return {
-      rawLrc: data.lyrics,
-    };
-  },
+  // async getLyric(musicItem: IMusicItem): Promise<ILyricSource | null> {
+  //   const data = await getMusicInfo(musicItem);
+  //   return {
+  //     rawLrc: data.rawLrc,
+  //   };
+  // },
   // // 获取专辑详情
   // async getAlbumInfo(albumItem, page) {
   //   // ...

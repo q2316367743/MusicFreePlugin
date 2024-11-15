@@ -31,7 +31,7 @@ async function getMusicInfo(
     title: data.title,
     artist: data.singer,
     artwork: data.cover,
-    music_url: data.url,
+    url: data.url,
     rawLrc: data.lrc
   };
 }
@@ -109,10 +109,10 @@ export default {
   async getMediaSource(
     mediaItem: IMusicItem,
     quality: MusicQuality
-  ): Promise<GetMediaSourceResult> {
+  ): Promise<IMediaSourceResult> {
     const data = await getMusicInfo(mediaItem);
     return {
-      url: data.music_url,
+      url: data.url!,
       headers: {},
       userAgent: "",
     };
